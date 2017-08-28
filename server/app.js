@@ -11,6 +11,7 @@ var port = 5000;
 var message = require('./routes/messages')
 
 app.use(express.static('public'));
+app.use(bodyParser.json());
 
 app.use('/message', message);
 

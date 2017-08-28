@@ -3,8 +3,7 @@ var router = express.Router();
 var sendMessage = require('../models/message.schema');
 
 router.get('/', function (req, res) {
-    
-    // get our data
+    // console.log('router.get was hit');
     sendMessage.find({}, function(err, data) {
         if (err) {
             console.log('Error found:', err);
@@ -18,9 +17,10 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function(req, res) {
-    console.log('new message, router post', req.body);
+    // console.log('new message, router post', req.body);
     var newMessage = new sendMessage(req.body);
     newMessage.save(function(err, data) {
+        console.log('router post to the collection: ', data);
         if (err) {
             console.log('router post error: ', err);
             res.sendStatus(500);
