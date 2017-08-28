@@ -3,12 +3,12 @@ var Schema = mongoose.Schema;
 
 // schema
 var messageSchema = new Schema({
-    name: { type: Text },
-    message: { type: Text }
+    name: { type: String },
+    message: { type: String }
 },
     {
         collection: 'messenger'
     }
 );
 
-module.exports = mongoose.model('rentals', rentalListingSchema);
+module.exports = mongoose.model('messenger', messageSchema);

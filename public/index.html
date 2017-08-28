@@ -7,13 +7,16 @@
     <script src="client.js"></script>
 </head>
 <body>
-    <h1>Code Challenge 5</h1>
-    <form>
-        <label>Name</label>
-        <input type="text" placeholder="Name" />
-        <label>Message</label>
-        <input type="text" placeholder="Message" />
-        <button>Send Message</button>
-    </form>
+    <div ng-app="MessageApp" ng-controller="MessageController as vm">
+        <h1>Code Challenge 5</h1>
+        <form>
+            <label>Name</label>
+            <input type="text" ng-model="vm.name" placeholder="Name" />
+            <label>Message</label>
+            <input type="text" ng-model="vm.message" placeholder="Message" />
+            <button ng-click="vm.addMessages()">Send Message</button>
+        </form>
+    </div>
 </body>
+
 </html>
