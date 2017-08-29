@@ -6,9 +6,10 @@
     <script src="vendors/angular.js"></script>
     <script src="vendors/angular-route.js"></script>
     <script src="client.js"></script>
+    <link href="vendors/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
     <div ng-app="MessageApp" ng-controller="MessageController as vm">
         <h1>Code Challenge 5</h1>
         <form>
@@ -16,9 +17,9 @@
             <input type="text" ng-model="vm.newMessage.name" placeholder="Name" />
             <label>Message</label>
             <input type="text" ng-model="vm.newMessage.message" placeholder="Message" />
-            <button ng-click="vm.addMessages(vm.newMessage)">Send Message</button>
+            <button ng-click="vm.addMessages(vm.newMessage)" class="btn btn-info btn-sm">Send Message</button>
         </form>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -26,7 +27,7 @@
                 </tr>
             </thead>
             <tbody ng-repeat="messages in vm.messages">
-                <tr>
+                <tr class="active">
                     <td>{{messages.name}}</td>
                     <td>{{messages.message}}</td>
                 </tr>

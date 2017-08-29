@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
             console.log('Error found:', err);
             res.sendStatus(500);
         } else {
-            console.log('Data: ', data);
+            // console.log('Data: ', data);
             res.send(data);
         }
     });
@@ -25,7 +25,7 @@ router.post('/', function(req, res) {
             console.log('router post error: ', err);
             res.sendStatus(500);
         } else {
-            console.log('router post data: ', data);
+            // console.log('router post data: ', data);
             res.sendStatus(201);
         }
     });

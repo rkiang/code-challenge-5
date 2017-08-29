@@ -9,14 +9,14 @@ app.controller('MessageController', ['$http', function ($http) {
 
     self.getMessages = function () {
         $http.get('/message').then(function (response) {
-            console.log(response);
-            console.log(response.data);
+            // console.log(response);
+            // console.log(response.data);
             self.messages = response.data;
         });
     };
 
     self.addMessages = function(newMessage) {
-        console.log('add message button was clicked', newMessage);
+        // console.log('add message button was clicked', newMessage);
         $http.post('/message', newMessage).then(function(response) {    
         });
         self.getMessages();
